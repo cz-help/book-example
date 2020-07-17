@@ -4,7 +4,8 @@
          xmlns:c="http://midpoint.evolveum.com/xml/ns/public/common/common-3"
          xmlns:q="http://prism.evolveum.com/xml/ns/public/query-3"
          xmlns:t="http://prism.evolveum.com/xml/ns/public/types-3"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 oid="00czhelp-init-dock-er00-ldap00000001">
         <name>update LDAP host value for docker environment</name>
                 <extension>
             <scext:executeScript xmlns:scext="http://midpoint.evolveum.com/xml/ns/public/model/scripting/extension-3">

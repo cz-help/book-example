@@ -2,8 +2,7 @@ version: "3.4"
 
 services:
   ldap:
-    build: ./ldap-base/
-    image: czhelp/ldap-base
+    image: czhelp/ldap-base:latest
     container_name: ldap
     ports:
       - "10389:389"
@@ -18,8 +17,7 @@ services:
       - ldap_data:/var/lib/ldap
 
   midpoint:
-    build: ./mp-base/
-    image: czhelp/mp-base
+    image: czhelp/mp-base:chapter-2-latest
     container_name: midpoint
     ports:
       - "8080:8080"
