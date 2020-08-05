@@ -1,0 +1,13 @@
+
+<role xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns="http://midpoint.evolveum.com/xml/ns/public/common/common-3"
+      xmlns:ri="http://midpoint.evolveum.com/xml/ns/public/resource/instance-3">
+    <name>Employee</name>
+    <inducement>
+        <construction>
+            <!-- LDAP -->
+            <resourceRef oid="b4101662-7902-11e6-9f14-53e18426fe81" />
+            <!-- just basic account. Nothing special here. -->
+        </construction>
+    </inducement>
+</role>
