@@ -1,0 +1,44 @@
+version: "3.4"
+
+services:
+  ldap:
+    image: osixia/openldap:1.3.0
+    container_name: book-ldap-chapter-9
+    entrypoint: [ "/container/tool/run", "--copy-service" ]
+    ports:
+      - "10389:389"
+    environment:
+      - LDAP_DOMAIN=example.com
+      - LDAP_ADMIN_PASSWORD=secret
+      - LDAP_TLS=false
+    networks:
+      - net
+    volumes:
+      - ldap_conf:/etc/ldap/slapd.d
+      - ldap_data:/var/lib/ldap
+      - ./book-chapter-common/container-book-ldap_files:/container/service/slapd/assets/config/bootstrap/ldif/custom/:ro
+
+  midpoint:
+    image: evolveum/midpoint:${MP_VER:-4.2-M2}-alpine
+    container_name: book-midpoint-chapter-8
+    ports:
+      - "8080:8080"
+    networks:
+      - net
+    volumes:
+      - midpoint_home:/opt/midpoint/var
+      - ./book-chapter-9/container-book-midpoint_files:/opt/midpoint-check/:ro
+    depends_on:
+      - ldap
+
+networks:
+  net:    
+    driver: bridge
+
+volumes:
+  midpoint_home:
+    name: midpoint_home-chapter-9
+  ldap_conf:
+    name: ldap_conf-chapter-9
+  ldap_data:
+    name: ldap_data-chapter-9
