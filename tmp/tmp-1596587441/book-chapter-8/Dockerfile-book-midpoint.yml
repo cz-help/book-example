@@ -1,0 +1,14 @@
+FROM evolveum/midpoint:latest
+
+LABEL maintainer=info@evolveum.com
+
+ADD https://raw.githubusercontent.com/Evolveum/midpoint-samples/master/samples/book/8/hr.csv /opt/midpoint/var/resources/
+
+ADD https://raw.githubusercontent.com/Evolveum/midpoint-samples/master/samples/book/8/extension-example.xsd /opt/midpoint/var/schema/
+
+ADD https://raw.githubusercontent.com/Evolveum/midpoint-samples/master/samples/book/8/resource-csv-hr.xml \
+ https://raw.githubusercontent.com/Evolveum/midpoint-samples/master/samples/book/8/resource-openldap.xml \
+ container-book-midpoint_files/z-001-task-update-resource-ldap_host-chapter8.xml \
+ container-book-midpoint_files/z-002-task-testResource-resource-csv.xml \
+ /opt/midpoint/var/post-initial-objects/
+

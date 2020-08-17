@@ -1,0 +1,43 @@
+version: "3.4"
+
+services:
+  ldap:
+    build: ../ldap-base
+    image: czhelp/ldap-base:latest
+    container_name: ldap-chapter-9
+    ports:
+      - "10389:389"
+      - "10636:636"
+    environment:
+      - LDAP_DOMAIN=example.com
+      - LDAP_PASSWORD=secret
+    networks:
+      - net
+    volumes:
+      - ldap_conf:/etc/ldap/slapd.d
+      - ldap_data:/var/lib/ldap
+
+  midpoint:
+    build: .
+    image: czhelp/mp-base:chapter-9-latest
+    container_name: midpoint-chapter-9
+    ports:
+      - "8080:8080"
+    networks:
+      - net
+    volumes:
+     - midpoint_home:/opt/midpoint/var
+    depends_on:
+     - ldap
+
+networks:
+  net:    
+    driver: bridge
+
+volumes:
+  midpoint_home:
+    name: midpoint_home-chapter-9
+  ldap_conf:
+    name: ldap_conf-chapter-9
+  ldap_data:
+    name: ldap_data-chapter-9

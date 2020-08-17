@@ -1,0 +1,6 @@
+FROM evolveum/midpoint:latest
+
+LABEL maintainer=info@evolveum.com
+
+ADD https://raw.githubusercontent.com/Evolveum/midpoint-samples/master/samples/book/6/extension-example.xsd /opt/midpoint/var/schema/
+
