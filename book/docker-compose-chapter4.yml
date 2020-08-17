@@ -17,6 +17,23 @@ services:
     volumes:
       - pg-midpoint_data:/var/lib/postgresql/data
 
+  ldap:
+    image: osixia/openldap:1.3.0
+    container_name: book-ldap-chapter-2
+    entrypoint: [ "/container/tool/run", "--copy-service" ]
+    ports:
+      - "10389:389"
+    environment:
+      - LDAP_DOMAIN=example.com
+      - LDAP_ADMIN_PASSWORD=secret
+      - LDAP_TLS=false
+    networks:
+      - net
+    volumes:
+      - ldap_conf:/etc/ldap/slapd.d
+      - ldap_data:/var/lib/ldap
+      - ./book-chapter-common/container-book-ldap_files:/container/service/slapd/assets/config/bootstrap/ldif/custom/:ro
+
   midpoint:
     image: evolveum/midpoint:${MP_VERSION:-4.2-M2.1}-alpine
     container_name: book-midpoint-chapter-4
@@ -53,5 +70,9 @@ secrets:
 volumes:
   midpoint_home:
     name: book-midpoint_home-chapter-4
+  ldap_conf:
+    name: book-ldap_conf-chapter-4
+  ldap_data:
+    name: book-ldap_data-chapter-4
   pg-midpoint_data:
     name: book-postgresql-midpoint_data-chapter-4
