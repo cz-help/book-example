@@ -60,8 +60,7 @@ if [ -e /opt/midpoint-dirs-docker-entrypoint ] ; then\n\
         done\n\
 	echo "- - - - - - - - - - - - - - - - - - - - -"\n\
 fi\n\n/usr/local/bin/startup.sh' >/usr/local/bin/midpoint-dirs-docker-entrypoint.sh && \
-  chmod 755 /usr/local/bin/*.sh /opt/midpoint/repository-url && \
-  chmod 755 /usr/local/bin/check-object.sh
+  chmod 755 /usr/local/bin/*.sh /opt/midpoint/repository-url
 
 VOLUME ${MP_DIR}/var
 
@@ -69,5 +68,5 @@ HEALTHCHECK --interval=1m --timeout=30s --start-period=2m CMD /usr/local/bin/hea
 
 EXPOSE 8080
 
-CMD ["/usr/local/bin/midpoint-dirs-docker-entrypoint"]
+CMD ["/usr/local/bin/midpoint-dirs-docker-entrypoint.sh"]
 
