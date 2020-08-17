@@ -44,8 +44,8 @@ ADD https://raw.githubusercontent.com/Evolveum/midpoint-docker/master/container_
 RUN apk --update add --no-cache openjdk11-jre-headless curl libxml2-utils tzdata bash && \
   echo $'#!/bin/sh\n\
 if [ -e /opt/midpoint-dirs-docker-entrypoint ] ; then\n\
-	echo "Processing midpoint-check directory..."\n\
-	for i in $( find /opt/midpoint-check -mindepth 1 -maxdepth 1 -type d ) ; do\n\
+	echo "Processing midpoint-dirs-docker-entrypoint directory..."\n\
+	for i in $( find /opt/midpoint-dirs-docker-entrypoint -mindepth 1 -maxdepth 1 -type d ) ; do\n\
 		l_name=$(basename ${i})\n\
 		[ ! -e ${MP_DIR}/var/${l_name} ] && mkdir -p ${MP_DIR}/var/${l_name}\n\
                 for s in $( find ${i} -mindepth 1 -maxdepth 1 -type f -exec basename \{\} \; ) ; do \n\
