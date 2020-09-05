@@ -12,10 +12,14 @@
 5 midpoint resources https://raw.githubusercontent.com/Evolveum/midpoint-samples/v4.1/samples/book/5/hr.csv
 5 midpoint post-initial-objects https://raw.githubusercontent.com/Evolveum/midpoint-samples/v4.1/samples/book/5/resource-csv-hr.xml
 5 midpoint post-initial-objects https://raw.githubusercontent.com/Evolveum/midpoint-samples/v4.1/samples/book/5/resource-openldap.xml
+5 ldap custom https://raw.githubusercontent.com/Evolveum/midpoint-samples/v4.1/samples/book/5/ldap-real.ldif
 
 6 midpoint schema https://raw.githubusercontent.com/Evolveum/midpoint-samples/v4.1/samples/book/6/extension-example.xsd
 
 7 midpoint resources https://raw.githubusercontent.com/Evolveum/midpoint-samples/de80cf61e07dd96649265e02f64b657596966f3a/samples/book/7/rms.csv
+7 midpoint resources https://raw.githubusercontent.com/Evolveum/midpoint-samples/v4.1/samples/book/5/hr.csv
+7 midpoint post-initial-objects https://raw.githubusercontent.com/Evolveum/midpoint-samples/v4.1/samples/book/5/resource-csv-hr.xml
+7 midpoint post-initial-objects https://raw.githubusercontent.com/Evolveum/midpoint-samples/v4.1/samples/book/5/task-hr-import.xml
 7 midpoint post-initial-objects https://raw.githubusercontent.com/Evolveum/midpoint-samples/v4.1/samples/book/2/resource-crm.xml
 7 midpoint post-initial-objects https://raw.githubusercontent.com/Evolveum/midpoint-samples/v4.1/samples/book/5/resource-openldap.xml
 7 midpoint post-initial-objects https://raw.githubusercontent.com/Evolveum/midpoint-samples/v4.1/samples/book/7/role-business-analyst.xml
@@ -25,17 +29,13 @@
 
 8 midpoint schema https://raw.githubusercontent.com/Evolveum/midpoint-samples/v4.1/samples/book/8/extension-example.xsd
 8 midpoint resources https://raw.githubusercontent.com/Evolveum/midpoint-samples/v4.1/samples/book/8/hr.csv
+8 midpoint post-initial-objects https://raw.githubusercontent.com/Evolveum/midpoint-samples/v4.1/samples/book/8/object-template-user.xml
+8 midpoint post-initial-objects https://raw.githubusercontent.com/Evolveum/midpoint-samples/v4.1/samples/book/8/resource-crm.xml
 8 midpoint post-initial-objects https://raw.githubusercontent.com/Evolveum/midpoint-samples/v4.1/samples/book/8/resource-csv-hr.xml
 8 midpoint post-initial-objects https://raw.githubusercontent.com/Evolveum/midpoint-samples/v4.1/samples/book/8/resource-openldap.xml
-
-9 midpoint schema https://raw.githubusercontent.com/Evolveum/midpoint-samples/v4.1/samples/book/8/extension-example.xsd
-9 midpoint resources https://raw.githubusercontent.com/Evolveum/midpoint-samples/v4.1/samples/book/8/hr.csv
-9 midpoint post-initial-objects https://raw.githubusercontent.com/Evolveum/midpoint-samples/v4.1/samples/book/8/resource-csv-hr.xml
-9 midpoint post-initial-objects https://raw.githubusercontent.com/Evolveum/midpoint-samples/v4.1/samples/book/8/resource-openldap.xml
-9 midpoint post-initial-objects https://raw.githubusercontent.com/Evolveum/midpoint-samples/v4.1/samples/book/8/object-template-user.xml
-9 midpoint post-initial-objects https://raw.githubusercontent.com/Evolveum/midpoint-samples/v4.1/samples/book/8/role-cook.xml
-9 midpoint post-initial-objects https://raw.githubusercontent.com/Evolveum/midpoint-samples/v4.1/samples/book/8/role-employee.xml
-9 midpoint post-initial-objects https://raw.githubusercontent.com/Evolveum/midpoint-samples/v4.1/samples/book/8/role-hatter.xml
-9 midpoint post-initial-objects https://raw.githubusercontent.com/Evolveum/midpoint-samples/v4.1/samples/book/8/role-sales-agent.xml
-9 midpoint post-initial-objects https://raw.githubusercontent.com/Evolveum/midpoint-samples/v4.1/samples/book/8/role-sales-assistant.xml
-9 midpoint post-initial-objects https://raw.githubusercontent.com/Evolveum/midpoint-samples/v4.1/samples/book/8/role-sales-manager.xml
+8 midpoint post-initial-objects https://raw.githubusercontent.com/Evolveum/midpoint-samples/v4.1/samples/book/8/role-cook.xml
+8 midpoint post-initial-objects https://raw.githubusercontent.com/Evolveum/midpoint-samples/v4.1/samples/book/8/role-employee.xml
+8 midpoint post-initial-objects https://raw.githubusercontent.com/Evolveum/midpoint-samples/v4.1/samples/book/8/role-hatter.xml 
+8 midpoint post-initial-objects https://raw.githubusercontent.com/Evolveum/midpoint-samples/v4.1/samples/book/8/role-sales-agent.xml
+8 midpoint post-initial-objects https://raw.githubusercontent.com/Evolveum/midpoint-samples/v4.1/samples/book/8/role-sales-assistant.xml
+8 midpoint post-initial-objects https://raw.githubusercontent.com/Evolveum/midpoint-samples/v4.1/samples/book/8/role-sales-manager.xml

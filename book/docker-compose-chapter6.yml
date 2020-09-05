@@ -36,7 +36,6 @@ services:
       - mp_keystore_password.txt
     volumes:
       - midpoint_home:/opt/midpoint/var
-      - ./book-chapter-6/container-book-midpoint_files:/opt/midpoint-dirs-docker-entrypoint/:ro
     depends_on:
       - postgresql-midpoint
 

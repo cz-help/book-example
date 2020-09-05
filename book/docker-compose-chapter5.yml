@@ -32,7 +32,8 @@ services:
     volumes:
       - ldap_conf:/etc/ldap/slapd.d
       - ldap_data:/var/lib/ldap
-      - ./book-chapter-common/container-book-ldap_files:/container/service/slapd/assets/config/bootstrap/ldif/custom/:ro
+      - ./book-chapter-common/container-book-ldap_files:/container/service/slapd/assets/config/bootstrap/ldif/custom/000_base:ro
+      - ./book-chapter-5/container-book-ldap_files/custom:/container/service/slapd/assets/config/bootstrap/ldif/custom/001_additional:ro
 
   midpoint:
     image: evolveum/midpoint:${MP_VERSION:-4.2-M2.1}-alpine

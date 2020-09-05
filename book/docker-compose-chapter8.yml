@@ -17,6 +17,21 @@ services:
     volumes:
       - pg-midpoint_data:/var/lib/postgresql/data
 
+  postgresql-crm:
+    image: postgres:12-alpine
+    container_name: book-postgresql-crm-chapter-8
+    environment:
+      - POSTGRES_PASSWORD=qwe123
+      - POSTGRES_USER=crm
+      - POSTGRES_INITDB_ARGS=--lc-collate=en_US.utf8 --lc-ctype=en_US.utf8
+    ports:
+      - 5432:5432
+    networks:
+      - net
+    volumes:
+      - pg-crm_data:/var/lib/postgresql/data
+      - ./book-chapter-common/container-book-postgres-crm_files:/docker-entrypoint-initdb.d/:ro
+
   ldap:
     image: osixia/openldap:1.3.0
     container_name: book-ldap-chapter-8
@@ -77,3 +92,5 @@ volumes:
     name: book-ldap_data-chapter-8
   pg-midpoint_data:
     name: book-postgresql-midpoint_data-chapter-8
+  pg-crm_data:
+    name: book-postgresql-crm_data-chapter-8

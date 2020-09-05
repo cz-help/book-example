@@ -1,5 +1,5 @@
 <task xmlns:icfc="http://midpoint.evolveum.com/xml/ns/public/connector/icf-1/connector-schema-3" 
-	xmlns:icfcldap="http://midpoint.evolveum.com/xml/ns/public/connector/icf-1/bundle/com.evolveum.polygon.connector-ldap/com.evolveum.polygon.connector.ldap.LdapConnector" 
+	xmlns:icscdbtable="http://midpoint.evolveum.com/xml/ns/public/connector/icf-1/bundle/com.evolveum.polygon.connector-databasetable/org.identityconnectors.databasetable.DatabaseTableConnector"
 	xmlns="http://midpoint.evolveum.com/xml/ns/public/common/common-3" 
 	xmlns:c="http://midpoint.evolveum.com/xml/ns/public/common/common-3" 
 	xmlns:q="http://prism.evolveum.com/xml/ns/public/query-3" 
@@ -7,7 +7,7 @@
 	xmlns:s="http://midpoint.evolveum.com/xml/ns/public/model/scripting-3" 
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 	xmlns:org="http://midpoint.evolveum.com/xml/ns/public/common/org-3">
-        <name>update LDAP host value for docker environment</name>
+        <name>update CRM host value for docker environment</name>
                 <extension>
             <scext:executeScript xmlns:scext="http://midpoint.evolveum.com/xml/ns/public/model/scripting/extension-3">
                 
@@ -24,25 +24,25 @@
 				<s:searchFilter>
 					<q:equal>
 						<q:path>name</q:path>
-						<q:value>OpenLDAP</q:value>
+						<q:value>CRM</q:value>
 					</q:equal>
 				</s:searchFilter>
 			</s:search>
 			<s:action>
-                        	<s:type>modify</s:type>
+				<s:type>modify</s:type>
 				<s:parameter>
 					<s:name>delta</s:name>
 					<c:value>
 						<s:itemDelta>
 							<t:modificationType>replace</t:modificationType>
-							<t:path>c:connectorConfiguration/icfc:configurationProperties/icfcldap:host</t:path>
-							<t:value>book-ldap-chapter-9</t:value>
+							<t:path>c:connectorConfiguration/icfc:configurationProperties/icscdbtable:host</t:path>
+							<t:value>book-postgresql-crm-chapter-8</t:value>
 						</s:itemDelta>
 					</c:value>
 				</s:parameter>
 			</s:action>
 			<s:action>
-			<!--                            <s:type>testResource</s:type>	-->
+				<!--                            <s:type>testResource</s:type>	-->
 				<s:type>test-resource</s:type>
 			</s:action>
                     </s:pipeline>
